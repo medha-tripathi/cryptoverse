@@ -13,7 +13,7 @@ const demoImage='https://tse1.mm.bing.net/th?id=OIP.aMUpT-dp6Gzk9OZVrg5TygHaFY&p
 export default function News({simplified}) {
   const [newsCategory,setNewsCategory]=useState('cryptocurrency');
   const {data:cryptoNews}=useGetCryptoNewsQuery({newsCategory,count:simplified?6:12});
-  const {data}=useGetCryptosQuery(100)
+  const {data}=useGetCryptosQuery(50)
 
   if(!cryptoNews?.articles) return <Loader/>
 
